@@ -87,8 +87,9 @@
 	director_ = (CCDirectorIOS*) [CCDirector sharedDirector];
 	
 	director_.wantsFullScreenLayout = YES;
-	
-    /////sss    
+	   
+    //s22sssss
+    //事实上
 	// Display FSP and SPF
 	[director_ setDisplayStats:YES];
 	
