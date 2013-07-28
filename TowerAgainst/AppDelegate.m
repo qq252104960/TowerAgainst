@@ -88,7 +88,8 @@
 	
 	director_.wantsFullScreenLayout = YES;
 	   
-    //s22
+    //s22sssss
+    //事实上
 	// Display FSP and SPF
 	[director_ setDisplayStats:YES];
 	
