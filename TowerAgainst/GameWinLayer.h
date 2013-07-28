@@ -11,7 +11,6 @@
 #import "GlobalData.h"
 #import "LoadingScene.h"
 #import "GameDefine.h"
-#import <BaiduSocialShare/BDSocialShareSDK.h>
 @interface GameWinLayer : CCLayer {
     
 }

@@ -11,7 +11,6 @@
 #import "GameControllLayer.h"
 #import "GameDefine.h"
 #import "MoneySprite.h"
-#import "WaveSprite.h"
 
 
 @implementation GameUILayer
@@ -58,11 +57,7 @@
         moneySprite.position = [globalData ccpConvertToGL:[globalData spriteSize:moneySprite].width/2+10 :20];
         [self addChild:moneySprite z:0 tag:GAME_TAG_SPRITE_MONEY];
         
-        WaveSprite *waveSprite = [[WaveSprite alloc]initWithSpriteFrameName:@"UI_creepWaveBoard.png" :gameData.waveCount];
-        waveSprite.position = [globalData ccpConvertToGL:[globalData spriteSize:moneySprite].width+20+[globalData spriteSize:waveSprite].width/2 :20];
-        [self addChild:waveSprite z:0 tag:GAME_TAG_SPRITE_WAVE];
-        
-        
+
         //左下角英雄和技能
         
     }

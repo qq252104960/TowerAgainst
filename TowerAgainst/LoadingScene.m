@@ -10,7 +10,6 @@
 #import "GameDefine.h"
 #import "MainLayer.h"
 #import "GameScene.h"
-#import "SelectScene.h"
 @implementation LoadingScene
 @synthesize sceneTarget;
 
@@ -41,9 +40,9 @@
             [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[MainLayer scene]]];
             CCLOG(@"ENTER TO GAME_SCENE_INIT");
             break;
-        case GAME_SCENE_SELECTCHAPTER:
-            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[SelectScene scene]]];
-            break;
+//        case GAME_SCENE_SELECTCHAPTER:
+//            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[SelectScene scene]]];
+//            break;
         case GAME_SCENE_PLAY:
             CCLOG(@"ENTER TO GAME_SCENE_PLAY");
 

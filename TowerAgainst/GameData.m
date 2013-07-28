@@ -10,13 +10,9 @@
 #import "GlobalData.h"
 #import "GameDefine.h"
 #import "GameUILayer.h"
-#import "WaveSprite.h"
 #import "MoneySprite.h"
 #import "GameWinLayer.h"
 #import "GameFailedLayer.h"
-#import "MapItem.h"
-#import "Wave.h"
-#import "WayPoint.h"
 #import "Hole.h"
 
 
@@ -92,70 +88,6 @@ static GameData * sSharedInstance;
         holes = [[CCArray alloc]init];
         mapItems = [[CCArray alloc]init];
 
-                
-        NSString *fileName = [NSString stringWithFormat:@"map%d-config" , globalData.selectMap];
-        NSString *plistPath = [[NSBundle mainBundle] pathForResource:fileName ofType:@"plist"];
-        NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:plistPath];
-        
-        [self setMoney:[[dic valueForKey:@"InitMoney"]intValue]];
-        
-
-        NSArray *wavesTemp = [dic valueForKey:@"Waves"];
-        [self setWaveCount:[wavesTemp count]];
-        
-        
-        for(NSArray *temp in wavesTemp){
-            NSMutableArray *temp3 = [[NSMutableArray alloc]init];
-            for(NSDictionary *temp2 in temp){
-                Wave *waveTemp = [[Wave alloc]initWithCreepId:[[temp2 valueForKey:@"creepId"]intValue] withPathNo:[[temp2 valueForKey:@"pathNo"]intValue]];
-                [temp3 addObject:waveTemp];
-            }
-            [waves addObject:temp3];
-        }
-    
-        NSArray *holesTemp = [dic valueForKey:@"Hole"];
-        for(NSDictionary *temp in holesTemp){
-            int x = [[temp valueForKey:@"x" ]intValue];
-            int y = [[temp valueForKey:@"y" ]intValue];
-            Hole *hole = [[Hole alloc]initWithType:[[temp valueForKey:@"type"]intValue] ];
-            hole.position = [globalData ccp:x :y];
-            [holes addObject:hole];
-            [baseLayer addChild:hole];
-            [hole release];
-        }
-        
-        NSArray *mapItemsTemp = [dic valueForKey:@"MapItem"];
-        for(NSDictionary *temp in mapItemsTemp){
-            [mapItems addObject:temp];
-        }
-        
-        NSDictionary *initPointDic = [dic valueForKey:@"InitPoint"];
-        NSDictionary *targetPointDic = [dic valueForKey:@"TargetPoint"];
-        
-        initPoint = [globalData ccp:[[initPointDic valueForKey:@"x" ]intValue] : [[initPointDic valueForKey:@"y" ]intValue]];
-        targetPoint = [globalData ccp:[[targetPointDic valueForKey:@"x" ]intValue] : [[targetPointDic valueForKey:@"y" ]intValue]];
-        
-        CCSprite *initPointSprite = [CCSprite spriteWithSpriteFrameName:@"InitPoint.png"];
-        CCSprite *targetPointSprite = [CCSprite spriteWithSpriteFrameName:@"TargetPoint.png"];
-        initPointSprite.position = initPoint;
-        targetPointSprite.position = targetPoint;
-        initPointSprite.anchorPoint = ccp(0.5 , 0);
-        targetPointSprite.anchorPoint = ccp(0.5 , 0);
-        [baseLayer addChild:initPointSprite z:GAME_LAYER_BASE_OBJECT];
-        [baseLayer addChild:targetPointSprite z:GAME_LAYER_BASE_OBJECT];
-        
-        
-        
-        NSArray *wayPointArray = [dic valueForKey:@"Path"];
-        for(NSArray *temp in wayPointArray){
-            NSMutableArray *arrayTemp = [[NSMutableArray alloc]init];
-            for(NSDictionary* temp2 in temp){
-                WayPoint *wayPoint = [[WayPoint alloc]initWithX:[[temp2 valueForKey:@"x"]intValue] withY:[[temp2 valueForKey:@"y"]intValue]];
-                [arrayTemp addObject:wayPoint];
-            }
-            [wayPoints addObject:arrayTemp];
-            [arrayTemp release];
-        }
     }
     return self;
 }
@@ -186,20 +118,6 @@ static GameData * sSharedInstance;
 - (bool)isMoneyEnough :(int)index{
     if(money>=index) return true;
     else return false;
-}
-- (void)addWave{
-    wave = wave+1;
-    if(wave <= waveCount){
-        GameUILayer *scene = (GameUILayer*)[[[CCDirector sharedDirector]runningScene] getChildByTag:GAME_TAG_LAYER_UI];
-        WaveSprite *waveSprite = (WaveSprite*)[scene getChildByTag:GAME_TAG_SPRITE_WAVE];
-        [waveSprite addWave:wave];
-    }
-    else{
-        [[CCDirector sharedDirector]pause];
-        GameWinLayer *scene = [GameWinLayer node];
-        [[[CCDirector sharedDirector]runningScene] addChild:scene z:GAME_LAYER_ALERT tag:GAME_TAG_LAYER_WIN];
-    }
-    
 }
 
 @end

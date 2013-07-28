@@ -12,6 +12,14 @@
 		D94172AD17A4AD1600B4B0F2 /* LoadingScene.m in Sources */ = {isa = PBXBuildFile; fileRef = D94172A917A4AD1600B4B0F2 /* LoadingScene.m */; };
 		D94172AE17A4AD1600B4B0F2 /* MainLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D94172AB17A4AD1600B4B0F2 /* MainLayer.m */; };
 		D94172AF17A4AD1600B4B0F2 /* TowerConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = D94172AC17A4AD1600B4B0F2 /* TowerConfig.plist */; };
+		D94172BE17A4B1B300B4B0F2 /* GameControllLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D94172B317A4B1B300B4B0F2 /* GameControllLayer.m */; };
+		D94172BF17A4B1B300B4B0F2 /* GameFailedLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D94172B517A4B1B300B4B0F2 /* GameFailedLayer.m */; };
+		D94172C017A4B1B300B4B0F2 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = D94172B717A4B1B300B4B0F2 /* GameScene.m */; };
+		D94172C117A4B1B300B4B0F2 /* GameUILayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D94172B917A4B1B300B4B0F2 /* GameUILayer.m */; };
+		D94172C217A4B1B300B4B0F2 /* GameWinLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D94172BB17A4B1B300B4B0F2 /* GameWinLayer.m */; };
+		D94172C317A4B1B300B4B0F2 /* Hole.m in Sources */ = {isa = PBXBuildFile; fileRef = D94172BD17A4B1B300B4B0F2 /* Hole.m */; };
+		D94172C617A4B22E00B4B0F2 /* MoneySprite.m in Sources */ = {isa = PBXBuildFile; fileRef = D94172C517A4B22E00B4B0F2 /* MoneySprite.m */; };
+		D94172C917A4DD5F00B4B0F2 /* Tower.m in Sources */ = {isa = PBXBuildFile; fileRef = D94172C817A4DD5F00B4B0F2 /* Tower.m */; };
 		D9868A4117A3FB0C0019DCDA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9868A4017A3FB0C0019DCDA /* QuartzCore.framework */; };
 		D9868A4317A3FB0C0019DCDA /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9868A4217A3FB0C0019DCDA /* OpenGLES.framework */; };
 		D9868A4517A3FB0C0019DCDA /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9868A4417A3FB0C0019DCDA /* OpenAL.framework */; };
@@ -157,6 +165,22 @@
 		D94172AB17A4AD1600B4B0F2 /* MainLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainLayer.m; sourceTree = "<group>"; };
 		D94172AC17A4AD1600B4B0F2 /* TowerConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TowerConfig.plist; sourceTree = "<group>"; };
 		D94172B117A4AF4A00B4B0F2 /* GameDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameDefine.h; sourceTree = "<group>"; };
+		D94172B217A4B1B300B4B0F2 /* GameControllLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameControllLayer.h; sourceTree = "<group>"; };
+		D94172B317A4B1B300B4B0F2 /* GameControllLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameControllLayer.m; sourceTree = "<group>"; };
+		D94172B417A4B1B300B4B0F2 /* GameFailedLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameFailedLayer.h; sourceTree = "<group>"; };
+		D94172B517A4B1B300B4B0F2 /* GameFailedLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameFailedLayer.m; sourceTree = "<group>"; };
+		D94172B617A4B1B300B4B0F2 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		D94172B717A4B1B300B4B0F2 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		D94172B817A4B1B300B4B0F2 /* GameUILayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameUILayer.h; sourceTree = "<group>"; };
+		D94172B917A4B1B300B4B0F2 /* GameUILayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameUILayer.m; sourceTree = "<group>"; };
+		D94172BA17A4B1B300B4B0F2 /* GameWinLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameWinLayer.h; sourceTree = "<group>"; };
+		D94172BB17A4B1B300B4B0F2 /* GameWinLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameWinLayer.m; sourceTree = "<group>"; };
+		D94172BC17A4B1B300B4B0F2 /* Hole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hole.h; sourceTree = "<group>"; };
+		D94172BD17A4B1B300B4B0F2 /* Hole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hole.m; sourceTree = "<group>"; };
+		D94172C417A4B22E00B4B0F2 /* MoneySprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoneySprite.h; sourceTree = "<group>"; };
+		D94172C517A4B22E00B4B0F2 /* MoneySprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneySprite.m; sourceTree = "<group>"; };
+		D94172C717A4DD5F00B4B0F2 /* Tower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tower.h; sourceTree = "<group>"; };
+		D94172C817A4DD5F00B4B0F2 /* Tower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tower.m; sourceTree = "<group>"; };
 		D9868A3D17A3FB0C0019DCDA /* TowerAgainst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TowerAgainst.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9868A4017A3FB0C0019DCDA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D9868A4217A3FB0C0019DCDA /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -536,6 +560,22 @@
 		D9868A5217A3FB0C0019DCDA /* TowerAgainst */ = {
 			isa = PBXGroup;
 			children = (
+				D94172C717A4DD5F00B4B0F2 /* Tower.h */,
+				D94172C817A4DD5F00B4B0F2 /* Tower.m */,
+				D94172C417A4B22E00B4B0F2 /* MoneySprite.h */,
+				D94172C517A4B22E00B4B0F2 /* MoneySprite.m */,
+				D94172B217A4B1B300B4B0F2 /* GameControllLayer.h */,
+				D94172B317A4B1B300B4B0F2 /* GameControllLayer.m */,
+				D94172B417A4B1B300B4B0F2 /* GameFailedLayer.h */,
+				D94172B517A4B1B300B4B0F2 /* GameFailedLayer.m */,
+				D94172B617A4B1B300B4B0F2 /* GameScene.h */,
+				D94172B717A4B1B300B4B0F2 /* GameScene.m */,
+				D94172B817A4B1B300B4B0F2 /* GameUILayer.h */,
+				D94172B917A4B1B300B4B0F2 /* GameUILayer.m */,
+				D94172BA17A4B1B300B4B0F2 /* GameWinLayer.h */,
+				D94172BB17A4B1B300B4B0F2 /* GameWinLayer.m */,
+				D94172BC17A4B1B300B4B0F2 /* Hole.h */,
+				D94172BD17A4B1B300B4B0F2 /* Hole.m */,
 				D94172B117A4AF4A00B4B0F2 /* GameDefine.h */,
 				D94172B017A4AD3700B4B0F2 /* ConfigFiles */,
 				D94172A217A4AD0900B4B0F2 /* GameData.h */,
@@ -1124,6 +1164,14 @@
 				D94172A717A4AD0900B4B0F2 /* GlobalData.m in Sources */,
 				D94172AD17A4AD1600B4B0F2 /* LoadingScene.m in Sources */,
 				D94172AE17A4AD1600B4B0F2 /* MainLayer.m in Sources */,
+				D94172BE17A4B1B300B4B0F2 /* GameControllLayer.m in Sources */,
+				D94172BF17A4B1B300B4B0F2 /* GameFailedLayer.m in Sources */,
+				D94172C017A4B1B300B4B0F2 /* GameScene.m in Sources */,
+				D94172C117A4B1B300B4B0F2 /* GameUILayer.m in Sources */,
+				D94172C217A4B1B300B4B0F2 /* GameWinLayer.m in Sources */,
+				D94172C317A4B1B300B4B0F2 /* Hole.m in Sources */,
+				D94172C617A4B22E00B4B0F2 /* MoneySprite.m in Sources */,
+				D94172C917A4DD5F00B4B0F2 /* Tower.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
