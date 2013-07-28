@@ -93,6 +93,9 @@
 =======
 	
     /////sss    
+<<<<<<< HEAD
+>>>>>>> ed0ea835c717302da73d3c678a5ded24f31ca26a
+=======
 >>>>>>> ed0ea835c717302da73d3c678a5ded24f31ca26a
 	// Display FSP and SPF
 	[director_ setDisplayStats:YES];
